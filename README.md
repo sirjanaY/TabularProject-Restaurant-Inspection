@@ -6,17 +6,17 @@
 
 ## Overview
 
-* **Definition of the tasks / challenge**: The task is to predict the outcome (Pass/Fail) of a restaurant inspection based on features from a dataset of previous inspection records.
-* **Our approach**: We approached the problem as a binary classification task using the XGBoost algorithm. The data was cleaned, categorical features were encoded, and missing values were handled. We experimented with hyperparameter tuning and model evaluation to get the best possible accuracy.
-* **Summary of the performance achieved**: Our best XGBoost model achieved an accuracy of approximately 91% with a high ROC AUC score and precision for both classes.
+**Definition of the tasks / challenge**: The task is to predict the outcome (Pass/Fail) of a restaurant inspection based on features from a dataset of previous inspection records.
+**Our approach**: We approached the problem as a binary classification task using the XGBoost algorithm. The data was cleaned, categorical features were encoded, and missing values were handled. We experimented with hyperparameter tuning and model evaluation to get the best possible accuracy.
+**Summary of the performance achieved**: Our best XGBoost model achieved an accuracy of approximately 91% with a high ROC AUC score and precision for both classes.
 
 ## Summary of Work Done
 
 ### Data
 
-* **Type**:
-  * Input: CSV file with features like risk category, inspection score, inspection type, and violation codes.
-  * Output: Inspection result (Pass/Fail).
+**Type**:
+* Input: CSV file with features like risk category, inspection score, inspection type, and violation codes.
+* Output: Inspection result (Pass/Fail).
 **Size**: ~276510 x 22
 
 
@@ -49,10 +49,10 @@ Size after clean and prep : 111051 x 17
   * Hyperparameters: learning rate = 0.1, max depth = 3, n_estimators = 100
 
 ### Training
-* **Software/Hardware**: Python (pandas, sklearn, xgboost), ran on local machine with 8GB RAM.
-* **Time**: ~10 seconds to train.
-* **Stopping Criteria**: Based on test performance.
-* **Difficulties**: Handling high cardinality features and overfitting. Used subsampling and column sampling to mitigate it.
+**Software/Hardware**: Python (pandas, sklearn, xgboost), ran on local machine with 8GB RAM.
+**Time**: ~10 seconds to train.
+**Stopping Criteria**: Based on test performance.
+**Difficulties**: Handling high cardinality features and overfitting. Used subsampling and column sampling to mitigate it.
 
 ### Performance Comparison
 
@@ -72,7 +72,7 @@ Size after clean and prep : 111051 x 17
 - Choose **Random Forest** for balanced performance, or **XGBoost** if ranking (ROC AUC) is critical.
 
 
-* **Visualization**:
+**Visualization**:
   * Confusion matrix
   * ROC Curve
 
