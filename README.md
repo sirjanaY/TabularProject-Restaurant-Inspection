@@ -7,7 +7,9 @@
 ## Overview
 
 **Definition of the tasks / challenge**: The task is to predict the outcome (Pass/Fail) of a restaurant inspection based on features from a dataset of previous inspection records.
+
 **Our approach**: We approached the problem as a binary classification task using the XGBoost algorithm. The data was cleaned, categorical features were encoded, and missing values were handled. We experimented with hyperparameter tuning and model evaluation to get the best possible accuracy.
+
 **Summary of the performance achieved**: Our best XGBoost model achieved an accuracy of approximately 91% with a high ROC AUC score and precision for both classes.
 
 ## Summary of Work Done
