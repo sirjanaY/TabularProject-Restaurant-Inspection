@@ -74,7 +74,7 @@ Size after clean and prep : 111051 x 17
   * ROC Curve
 
  
-[ROC](ROC.png)
+![ROC](ROC.png)
 
 
 ### Conclusions
