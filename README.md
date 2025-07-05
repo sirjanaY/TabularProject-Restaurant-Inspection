@@ -2,7 +2,7 @@
 
 # XGBoost for Restaurant Inspection Prediction
 
-* **One Sentence Summary**: This repository contains a solution using XGBoost to classify restaurant inspection results as Pass or Fail, based on data from the City of Austin Health Inspection Records.
+* **One Sentence Summary**: This repository contains a solution using XGBoost to classify restaurant inspection results as Pass or Fail, based on data from the Department of Health and Mental Hygiene (DOHMH).
 
 ## Overview
 
@@ -17,13 +17,17 @@
 * **Type**:
   * Input: CSV file with features like risk category, inspection score, inspection type, and violation codes.
   * Output: Inspection result (Pass/Fail).
-* **Size**: ~88,000 records.
-* **Split**: 80% training, 20% testing.
+**Size**: ~276510 x 22
+
 
 #### Preprocessing / Cleanup
-* Removed irrelevant columns like 'Name' during model training and added it back for submission.
-* Encoded categorical variables.
-* Imputed missing values.
+* Removed irrelevant columns like Latitude/ Longitude, zip code etc.
+* One Hot- Encoded categorical variables.
+* Removed missing values.
+* Label Encoded 2 features
+
+Size after clean and prep : 111051 x 17
+**Split**: 80% training, 20% testing.
 
 #### Data Visualization
 * Bar plots for Pass/Fail distribution.
@@ -49,14 +53,26 @@
 
 ### Performance Comparison
 
-| Model          | Accuracy | Precision | Recall | ROC AUC |
-|----------------|----------|-----------|--------|---------|
-| Random Forest  | ~89%     | 0.88      | 0.85   | 0.90    |
-| **XGBoost**     | **91%**  | 0.91      | 0.87   | 0.92    |
+###  Model Performance Comparison (After GridSearchCV Tuning)
+
+| **Metric**         | **Random Forest (Tuned)** | **XGBoost (Tuned)**   |
+|--------------------|---------------------------|------------------------|
+| **Accuracy**       | **0.9488**                | 0.9455                 |
+| **F1 Score**       | **0.8744**                | 0.8598                 |
+| **ROC AUC Score**  | 0.9825                    | **0.9829**             |
+
+---
+
+**Notes**:
+- **Random Forest** showed better overall performance in **accuracy** and **F1 Score**.
+- **XGBoost** had a slightly higher **ROC AUC**, indicating marginally better distinction between classes.
+- Choose **Random Forest** for balanced performance, or **XGBoost** if ranking (ROC AUC) is critical.
+
 
 * **Visualization**:
   * Confusion matrix
   * ROC Curve
+
 
 ### Conclusions
 
@@ -111,6 +127,4 @@ pip install pandas numpy matplotlib seaborn xgboost scikit-learn
 
 ## Citations
 
-* XGBoost Documentation: https://xgboost.readthedocs.io/
-* Scikit-learn Documentation: https://scikit-learn.org/
-* Kaggle Dataset (if applicable): [Insert Kaggle link if used]
+*  Dataset Source: [https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j/about_data]
