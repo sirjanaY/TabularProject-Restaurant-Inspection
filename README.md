@@ -33,6 +33,9 @@ Size after clean and prep : 111051 x 17
 * Bar plots for Pass/Fail distribution.
 * Count plots for categorical features.
 
+  ![Graph](Graph.png)
+
+
 ### Problem Formulation
 
 * **Input / Output**:
