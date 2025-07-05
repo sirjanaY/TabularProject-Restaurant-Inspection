@@ -72,6 +72,7 @@ Size after clean and prep : 111051 x 17
 * **Visualization**:
   * Confusion matrix
   * ROC Curve
+![ROCcurve](ROCcurve.png)
 
 
 ### Conclusions
