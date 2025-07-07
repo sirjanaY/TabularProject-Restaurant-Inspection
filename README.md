@@ -87,7 +87,7 @@ Size after clean and prep : 111051 x 17
   * ROC Curve
 
 
-![ROC](ROC.png)
+![roc](roc.png)
 
 ### Conclusions
 * XGBoost consistently outperformed Random Forest in both accuracy and AUC.
