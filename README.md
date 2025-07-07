@@ -40,7 +40,7 @@ Size after clean and prep : 111051 x 17
   
  Example of one feature using matplotlib (To view all the features, please refer : preprocccessing notebook) : 
  
-![graph](graph.png) ![graphn](graphn.png)
+![graph](graph.png) ![graph3](graph3.png)
 
 
 ### Problem Formulation
