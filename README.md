@@ -35,7 +35,7 @@ Size after clean and prep : 111051 x 17
 * Bar plots for Pass/Fail distribution.
 * Count plots for categorical features.
   
- Example of one feature using matplotlib : 
+ Example of one feature using matplotlib (To view all the features, please refer : preprocccessing notebook) : 
  
 ![Graph](Graph.png)
 
