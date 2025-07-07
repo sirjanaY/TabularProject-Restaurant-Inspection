@@ -99,14 +99,14 @@ Size after clean and prep : 111051 x 17
 * Deploy model for real-time inspection prediction.
 
 ## How to Reproduce Results
-* Run `Prototype.solution.ipynb` to train the model.
-* Run `Feasibility.Solution.ipynb` to generate and export the submission CSV.
+* Run `DataPreprpcessing.ipynb` to train the model.
+* Run `ML.ipynb` to generate and export the submission CSV.
 * Make sure `cleaned_inspection_data.csv` is available.
 
 ### Overview of Files in Repository
-* `Prototype.solution.ipynb`: Initial data processing and Random Forest baseline.
-* `Feasibility.Solution.ipynb`: Final XGBoost model, evaluation, and submission creation.
-* `submission_xgboost.csv`: Final predictions for submission.
+* `DataPreprpcessing.ipynb`: Initial data processing and Random Forest baseline.
+* `ML.ipynb`: Final XGBoost model, evaluation, and submission creation.
+* `submission.csv`: Final predictions for submission.
 * `cleaned_inspection_data.csv`: Cleaned dataset used for modeling.
 
 ### Software Setup
