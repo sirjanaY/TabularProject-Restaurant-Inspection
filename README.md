@@ -41,10 +41,12 @@ Size after clean and prep : 111051 x 17
  Example of one feature using matplotlib (To view all the features, please refer : preprocccessing notebook) : 
  
  **Categorical Features**
+ 
 ![graph](graph.png)
 
  **Numerical Features**
-![graph3](graph3.png)
+ 
+![graphn](graphn.png)
 
 
 ### Problem Formulation
