@@ -26,6 +26,8 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
   I avoided using the `Inspection Score` due to its strong correlation with the final result (risk of label leakage). Instead, I selected `Inspection Result` and converted it into a binary `result` column:  
   - `Pass` = `Satisfactory`, `Complete`  
   - `Fail` = `Unsatisfactory`, `Incomplete`  
+![im1](im1.png)
+
 
 - **Data Cleaning:**  
   Removed irrelevant or leakage-prone columns like phone number, coordinates, and unique IDs. Also dropped missing values for quality control.
