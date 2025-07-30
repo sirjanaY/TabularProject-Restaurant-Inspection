@@ -1,3 +1,5 @@
+![](UTA-DataScience-Logo.png)
+
 #  Restaurant Inspection Failure Prediction – NYC
 
 ## One Liner  
