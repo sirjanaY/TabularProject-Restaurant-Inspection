@@ -43,13 +43,7 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
 - **Class Filtering & Labeling:**  
   Focused on 4 inspection classes and created a new `result` column for binary classification. This made the model’s output easy to interpret for real-world applications.
 
-- **Model Selection:**  
-  I compared:
-  - **Random Forest** as a baseline  
-  - **XGBoost** with hyperparameter tuning  
-  to assess performance vs. interpretability.
 
-![im2](im2.png)
 
 ---
 
@@ -64,16 +58,62 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
 
 ##  Results Summary
 
-| **Metric**         | **Random Forest** | **XGBoost**     |
-|--------------------|-------------------|-----------------|
-| Accuracy           | **94.88%**        | 94.55%          |
-| F1 Score           | **87.44%**        | 85.98%          |
-| ROC AUC Score      | 98.25%            | **98.29%**      |
+###  Random Forest
+Random Forest showed strong overall performance, especially in terms of F1 Score, which is crucial in imbalanced classification problems like this. It’s a robust ensemble model that reduces overfitting by averaging multiple decision trees.
 
-- **Random Forest** had stronger overall performance across most metrics.  
-- **XGBoost** slightly outperformed in **class separation** based on ROC AUC.
+- Robust to overfitting and noise  
+- Automatically handles feature interactions  
+-  Interpretable via `feature_importances_`  
+-  Recommended for use in early deployment phases or when high interpretability is desired  
 
-![im3](im3.png)
+add
+
+---
+
+###  XGBoost (Tuned)
+
+XGBoost slightly outperformed all models in **ROC AUC**, indicating it best separates “Pass” from “Fail”. It uses gradient boosting and regularization, making it powerful and efficient.
+
+-  High AUC and precision with hyperparameter tuning  
+-  Handles missing data and sparse features  
+-  SHAP values provide advanced model interpretability  
+-  Ideal for production systems prioritizing predictive power  
+
+
+
+---
+
+###  Decision Tree
+
+The simplest model in our pipeline, Decision Tree offers full transparency in how decisions are made. It’s less accurate than ensemble methods but great for visual explanation.
+
+-  Fully interpretable structure  
+-  Quick to train  
+-  Prone to overfitting without pruning  
+-  Suitable for stakeholder presentations and small-scale rule systems  
+
+
+
+---
+
+###  Logistic Regression
+
+As a baseline, Logistic Regression performed surprisingly well, given its linear nature. It’s a fast, efficient model that outputs interpretable coefficients, useful for understanding linear feature impacts.
+
+-  Very fast to train and test  
+-  Coefficients explain feature impact directionally  
+-  Limited in capturing complex patterns or feature interactions  
+-  Great for quick prototyping or lightweight apps  
+
+
+---
+
+###  Final Model Comparison Takeaway
+
+- **XGBoost**: Best for separation and generalization  
+- **Random Forest**: Best balance of performance + explainability  
+- **Decision Tree**: Best for visual interpretability  
+- **Logistic Regression**: Best for speed and simplicity
 
 ---
 
