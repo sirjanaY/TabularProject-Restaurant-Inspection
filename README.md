@@ -24,11 +24,13 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
 - **Target Selection:**  
   I avoided using the `Inspection Score` due to its strong correlation with the final result (risk of label leakage). Instead, I selected `Inspection Result` and converted it into a binary `result` column:  
   - `Pass` = `Satisfactory`, `Complete`  
-  - `Fail` = `Unsatisfactory`, `Incomplete`  
-![im1](im1.png)
+  - `Fail` = `Unsatisfactory`, `Incomplete`
+ 
+![graph1](graph1.png)
 
 Changed to --->
-![plot1](plot1.png)
+
+![graph2](graph2.png)
 
 
 - **Data Cleaning:**  
