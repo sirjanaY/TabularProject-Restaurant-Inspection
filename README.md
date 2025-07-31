@@ -128,7 +128,7 @@ XGBoost slightly outperformed all models in **ROC AUC**, indicating it best sepa
 
 ##  Feature Importance Insights
 
-I used both `feature_importances_` from Random Forest and **SHAP values** for XGBoost to understand what drove the predictions.
+I used both `feature_importances_` from Random Forest and XGBoost to understand what drove the predictions.
 
 ###  Top Influential Features:
 - Violation Type  
