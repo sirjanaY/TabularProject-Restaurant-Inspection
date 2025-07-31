@@ -91,7 +91,8 @@ The simplest model in our pipeline, Decision Tree offers full transparency in ho
 Random Forest showed strong overall performance, especially in terms of F1 Score, which is crucial in imbalanced classification problems like this. It’s a robust ensemble model that reduces overfitting by averaging multiple decision trees.
 
 - Robust to overfitting and noise  
-- Automatically handles feature interactions  
+- Automatically handles feature interactions
+- Tuned using GridSearchCV across parameters like `n_estimators`, `max_depth`, and `min_samples_split`
 -  Interpretable via `feature_importances_`  
 -  Recommended for use in early deployment phases or when high interpretability is desired  
 
@@ -105,11 +106,10 @@ Random Forest showed strong overall performance, especially in terms of F1 Score
 
 XGBoost slightly outperformed all models in **ROC AUC**, indicating it best separates “Pass” from “Fail”. It uses gradient boosting and regularization, making it powerful and efficient.
 
--  High AUC and precision with hyperparameter tuning  
+-  High AUC and precision with hyperparameter tuning
+-  Tuned using GridSearchCV for `learning_rate`,` max_depth`, `n_estimators `, etc.
 -  Handles missing data and sparse features  
--  SHAP values provide advanced model interpretability  
 -  Ideal for production systems prioritizing predictive power  
-
 ---
 
 ![plot5](plot5.png)
