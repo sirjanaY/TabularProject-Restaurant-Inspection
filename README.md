@@ -2,7 +2,7 @@
 
 #  Restaurant Inspection Failure Prediction – NYC
 
-## One Liner  
+## One Line Summary  
 Built an interpretable ML system using **Random Forest** and also tested other models to predict restaurant inspection outcomes and help prevent food safety violations.
 
 ---
