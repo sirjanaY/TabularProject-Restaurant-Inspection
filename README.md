@@ -20,8 +20,7 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
 
 ---
 
-##  Key Modeling Choices & Justifications
-
+##  Key Modeling Choices 
 - **Target Selection:**  
   I avoided using the `Inspection Score` due to its strong correlation with the final result (risk of label leakage). Instead, I selected `Inspection Result` and converted it into a binary `result` column:  
   - `Pass` = `Satisfactory`, `Complete`  
@@ -54,7 +53,7 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
 
 ---
 
-## ⚙ Tech Stack
+##  Tools
 
 - **Language:** Python  
 - **Libraries:** pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn, shap  
