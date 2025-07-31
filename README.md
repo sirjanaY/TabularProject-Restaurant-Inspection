@@ -3,14 +3,14 @@
 #  Restaurant Inspection Failure Prediction – NYC
 
 ## One Liner  
-Built an interpretable ML system using **XGBoost** and **Random Forest** to predict restaurant inspection outcomes and help prevent food safety violations.
+Built an interpretable ML system using **Random Forest** and also tested other models to predict restaurant inspection outcomes and help prevent food safety violations.
 
 ---
 
 ##  Project Overview
 
 ###  Objective  
-To develop a non-trivial, actionable machine learning model that predicts whether a restaurant is likely to **pass or fail** a health inspection using historical NYC data. This model can assist health departments in prioritizing high-risk inspections and empower businesses to improve compliance.
+To develop a non-trivial, actionable machine learning model that predicts whether a restaurant is likely to **pass or fail** a health inspection using historical NYC data. This model can assist health departments in prioritizing high-risk inspections and empower businesses to improve compliance. The Random Forest classifier(tuned) stood out as the most reliable and well-rounded model in this project. It achieved the highest performance across all key metrics: an accuracy of 94.88%, an F1 score of 87%, and a ROC AUC of 98%
 
 ### Why This Project Matters  
 Foodborne illnesses are a major public health concern. When dining out, no one expects to face health issues—or worse, life-threatening consequences. By predicting inspection failures before they occur, this project contributes to:
@@ -56,14 +56,38 @@ Changed to --->
 
 - **Language:** Python  
 - **Libraries:** pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn, shap  
-- **Hardware:** Local machine with 8GB RAM  
 - **Training Time:** ~10 seconds
 
 ---
 
-##  Results Summary
+##  Results Summary: 
 
-###  Random Forest
+The Random Forest classifier emerged as the best-performing model in this project, achieving the highest accuracy (94.88%), F1 score (0.8740), and ROC AUC (0.9825) among all models tested. Its ability to handle complex, high-dimensional data and mitigate overfitting through ensemble learning made it particularly well-suited for predicting restaurant inspection outcomes.
+
+In contrast, while XGBoost is a powerful boosting algorithm, it underperformed in this case with a significantly lower F1 score (0.5486), suggesting poor balance between precision and recall, especially for the minority class. Similarly, Logistic Regression and Decision Tree models offered lower predictive power (F1 scores around 0.51), likely due to their limited capacity to capture non-linear relationships and interactions present in the data. These comparisons highlight why Random Forest was not only the most accurate but also the most robust and generalizable model in this application.
+
+![plot6](plot6.png)
+
+###  Logistic Regression (Primary Baseline)
+
+As a baseline, Logistic Regression performed surprisingly well, given its linear nature. It’s a fast, efficient model that outputs interpretable coefficients, useful for understanding linear feature impacts.
+
+-  Very fast to train and test  
+-  Coefficients explain feature impact directionally  
+-  Limited in capturing complex patterns or feature interactions  
+-  Great for quick prototyping or lightweight apps  
+---
+
+###  Decision Tree (Trial model)
+
+The simplest model in our pipeline, Decision Tree offers full transparency in how decisions are made. It’s less accurate than ensemble methods but great for visual explanation.
+
+-  Fully interpretable structure  
+-  Quick to train  
+-  Prone to overfitting without pruning  
+-  Suitable for stakeholder presentations and small-scale rule systems  
+
+###  Random Forest 
 Random Forest showed strong overall performance, especially in terms of F1 Score, which is crucial in imbalanced classification problems like this. It’s a robust ensemble model that reduces overfitting by averaging multiple decision trees.
 
 - Robust to overfitting and noise  
@@ -87,29 +111,7 @@ XGBoost slightly outperformed all models in **ROC AUC**, indicating it best sepa
 -  Ideal for production systems prioritizing predictive power  
 
 ---
-![plot6](plot6.png)
 
-
-###  Decision Tree
-
-The simplest model in our pipeline, Decision Tree offers full transparency in how decisions are made. It’s less accurate than ensemble methods but great for visual explanation.
-
--  Fully interpretable structure  
--  Quick to train  
--  Prone to overfitting without pruning  
--  Suitable for stakeholder presentations and small-scale rule systems  
-
----
-
-###  Logistic Regression
-
-As a baseline, Logistic Regression performed surprisingly well, given its linear nature. It’s a fast, efficient model that outputs interpretable coefficients, useful for understanding linear feature impacts.
-
--  Very fast to train and test  
--  Coefficients explain feature impact directionally  
--  Limited in capturing complex patterns or feature interactions  
--  Great for quick prototyping or lightweight apps  
----
 ![plot5](plot5.png)
 
 
