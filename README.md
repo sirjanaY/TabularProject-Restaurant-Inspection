@@ -140,7 +140,6 @@ I used both `feature_importances_` from Random Forest and XGBoost to understand 
 These features provide **explainability** and can guide inspection training, public health communication, or intervention strategy.
 
 ---
-
 ##  Real-World Impact
 
 -  Helps inspectors focus on **high-risk businesses**  
@@ -163,6 +162,16 @@ Several enhancements can build on this project to increase its real-world utilit
   Build a REST API to allow real-time predictions for internal dashboards or city-wide inspection tools.
 
 ##  Reproducibility
+
+##  Run Notebooks in This Order
+
+                                                                                       
+ `DataPreprocessing.ipynb`  Clean raw NYC inspection dataset, drop leakage-prone columns, encode labels 
+ `LogisticRegression.ipynb` Train and evaluate logistic regression model with ROC/F1 analysis            
+ `DecisionTree.ipynb`        Train decision tree classifier, tune `max_depth`, evaluate results          
+ `ML_RF.ipynb`               Train and tune Random Forest using `GridSearchCV`, generate visualizations  
+ `XGB.ipynb`                 Train and tune XGBoost, tune as well as evaluate with SHAP values and confusion matrix      
+ `CompareModels.ipynb`       Generate model comparison table and combined ROC curve for all classifiers  
 
 ###  How to Run the Code
 
