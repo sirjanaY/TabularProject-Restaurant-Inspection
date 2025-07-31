@@ -27,6 +27,9 @@ Foodborne illnesses are a major public health concern. When dining out, no one e
   - `Fail` = `Unsatisfactory`, `Incomplete`  
 ![im1](im1.png)
 
+Changed to --->
+![plot1](plot1.png)
+
 
 - **Data Cleaning:**  
   Removed irrelevant or leakage-prone columns like phone number, coordinates, and unique IDs. Also dropped missing values for quality control.
@@ -66,7 +69,9 @@ Random Forest showed strong overall performance, especially in terms of F1 Score
 -  Interpretable via `feature_importances_`  
 -  Recommended for use in early deployment phases or when high interpretability is desired  
 
-add
+
+![plot2](plot2.png)
+![plot3](plot3.png)
 
 ---
 
@@ -79,9 +84,9 @@ XGBoost slightly outperformed all models in **ROC AUC**, indicating it best sepa
 -  SHAP values provide advanced model interpretability  
 -  Ideal for production systems prioritizing predictive power  
 
-
-
 ---
+![plot6](plot6.png)
+
 
 ###  Decision Tree
 
@@ -91,8 +96,6 @@ The simplest model in our pipeline, Decision Tree offers full transparency in ho
 -  Quick to train  
 -  Prone to overfitting without pruning  
 -  Suitable for stakeholder presentations and small-scale rule systems  
-
-
 
 ---
 
@@ -104,9 +107,9 @@ As a baseline, Logistic Regression performed surprisingly well, given its linear
 -  Coefficients explain feature impact directionally  
 -  Limited in capturing complex patterns or feature interactions  
 -  Great for quick prototyping or lightweight apps  
-
-
 ---
+![plot5](plot5.png)
+
 
 ###  Final Model Comparison Takeaway
 
@@ -116,6 +119,8 @@ As a baseline, Logistic Regression performed surprisingly well, given its linear
 - **Logistic Regression**: Best for speed and simplicity
 
 ---
+![plot4](plot4.png)
+
 
 ##  Feature Importance Insights
 
